@@ -4,13 +4,16 @@ Currently only supports your-house.nl
 
 ## Description
 
-.
+todo.
+## Prechecks
+
+1. The app was written for gmail account. Create one, enable two-factor authentication, and create app-specific password 
+(normal one won't work).
+2. Fill `config.ini` (check `config_template.ini`). Adjust urls to your needs.
 
 ## Run
 
-1. Fill `config_template.ini` and change the name to `config.ini`
-2. `Run src/refresh_yourhouse.py`
-
+`python main.py`
 
 ## Dependencies
 
