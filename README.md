@@ -14,7 +14,7 @@ Currently only supports your-house.nl
 
 ## Dependencies
 
-* Python 3.10 (https://www.python.org)
+* Python 3.10.10
 
 ## Authors
 

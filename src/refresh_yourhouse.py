@@ -11,14 +11,15 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 import time
 from datetime import datetime
-CONFIG_PATH = "../config.ini"
+CONFIG_PATH = "config.ini"
 
 
 class HousingRefresh:
 
-    def __init__(self, config_path="../config.ini") -> None:
+    def __init__(self, config_path=CONFIG_PATH) -> None:
         self.config = configparser.ConfigParser()
         self.config.read(config_path)
+        print(self.config["all"])
 
         # Set Logger
         logging.basicConfig(
@@ -42,6 +43,7 @@ class HousingRefresh:
         self.house_dict = None
 
     def get_current_posts(self) -> int:
+        
         req = requests.get(self.url_yourhouse)
         soup = BeautifulSoup(req.text, "html.parser")
         newest_post = soup.find("article", {"class": "objectcontainer col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4"})
